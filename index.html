@@ -1,27 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Hotel Reservation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Hamburger Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- header/navbar -->
-  <header>
-    
-  </header>
-  
-  <!-- content -->
-  <main>
-    
-  </main>
-  
-  <!-- footer -->
-  <footer>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="main-header">
+      <!-- Logo Company -->
+      <div class="logo-company">
+        <img src="assets/logo.png" alt="Logo" style="width: 75px" />
+      </div>
 
-  </footer>
-</body>
+      <!-- Hamburger Menu -->
+      <div class="hamburger" onclick="toggleNav()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav id="nav">
+        <a href="#home" class="nav1">Home</a>
+        <a href="#our-package-section" class="nav2">Our Packages</a>
+        <a href="#book-section" class="nav3">Book Now</a>
+      </nav>
+    </header>
+
+    <!-- Banner Autoslide -->
+    <section class="banner-section">
+      <div class="main-banner banner-img-1">
+        <img src="assets/gambar1.jpg" alt="" />
+      </div>
+      <div class="main-banner banner-img-2">
+        <img src="assets/gambar2.jpg" alt="" />
+      </div>
+      <div class="main-banner banner-img-3">
+        <img src="assets/gambar3.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Home Section -->
+      <section id="home">
+        <header>
+          <h1>Your Trusted Travel Agent</h1>
+          <h4>Your Happiness is Our Happiness</h4>
+        </header>
+      </section>
+
+      <!-- Our Packages Section -->
+      <section id="our-package-section">
+        <header>
+          <h2>Our Packages</h2>
+        </header>
+        <div class="package-container">
+          <div class="package-card">
+            <i class="fas fa-hotel package-icon"></i>
+            <h3>Standard Room</h3>
+            <p>
+              Enjoy a comfortable stay in our standard room with basic
+              amenities.
+            </p>
+            <p class="price">$100/night</p>
+          </div>
+          <div class="package-card">
+            <i class="fas fa-bed package-icon"></i>
+            <h3>Deluxe Room</h3>
+            <p>
+              Upgrade to a deluxe room for extra space and luxury amenities.
+            </p>
+            <p class="price">$150/night</p>
+          </div>
+          <div class="package-card">
+            <i class="fas fa-swimming-pool package-icon"></i>
+            <h3>Suite Room</h3>
+            <p>
+              Experience ultimate luxury with our suite room and private pool
+              access.
+            </p>
+            <p class="price">$250/night</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Book Now Section -->
+      <section id="book-section">
+        <header>
+          <h2>Book Now</h2>
+        </header>
+        <form id="book-form">
+          <div class="form-group">
+            <label for="name-input">Name:</label>
+            <input
+              type="text"
+              id="name-input"
+              required
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="checkin-input">Check-in Date:</label>
+            <input type="date" id="checkin-input" required />
+          </div>
+          <div class="form-group">
+            <label for="checkout-input">Check-out Date:</label>
+            <input type="date" id="checkout-input" required />
+          </div>
+          <div class="form-group">
+            <label for="room-type">Room Type:</label>
+            <select id="room-type" required>
+              <option value="" disabled selected>Select room type</option>
+              <option value="standard">Standard Room</option>
+              <option value="deluxe">Deluxe Room</option>
+              <option value="suite">Suite Room</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="button" onclick="validateBookForm();">Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made by Bramasta@2025</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
